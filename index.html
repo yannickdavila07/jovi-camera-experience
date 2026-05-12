@@ -163,6 +163,128 @@
 
             </div>
         </section>
+
+        !-- SEÇÃO 4: CÂMERA / SLIDESHOW -->
+    
+        <section id="camera-section" class="hidden">
+
+            <header class="app-header">
+                <button id="btn-voltar">← Voltar</button>
+                <span id="modo-atual">Modo: Padrão</span>
+            </header>
+
+            <!-- SLIDESHOW DE SLIDES INFORMATIVOS -->
+            <div id="slideshow-container" class="slideshow-container">
+
+                <!-- Slide 1: O que é este modo -->
+                <div class="slide active">
+                    <div class="slide-content">
+
+                        <div id="slide-icone-topo" class="slide-icone-topo">
+                            <!-- ícone SVG inserido via JS -->
+                        </div>
+
+                        <h3 id="slide-titulo">Título do Modo</h3>
+                        <p id="slide-descricao">Descrição do modo aparece aqui.</p>
+
+                        <!-- cards de destaque do modo -->
+                        <div class="info-cards-grid" id="info-cards-grid">
+                            <!-- preenchido via JS -->
+                        </div>
+
+                        <div class="dica-box" id="slide-dica">
+                            <!-- dica preenchida via JS -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 2: Quando usar -->
+                <div class="slide">
+                    <div class="slide-content">
+
+                        <div class="slide-icone-topo quando-icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+
+                        <h3>Quando usar</h3>
+                        <p id="slide-quando">Informação de quando usar.</p>
+
+                        <!-- lista de situações ideais -->
+                        <ul class="situacoes-lista" id="slide-situacoes">
+                            <!-- preenchido via JS -->
+                        </ul>
+
+                        <div class="aviso-box" id="slide-aviso">
+                            <!-- aviso preenchido via JS -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 3: Antes e Depois com câmera real -->
+                <div class="slide">
+                    <div class="slide-content antes-depois">
+                        <h3>📷 Antes vs Depois</h3>
+                        <p class="instrucao-slide">Tire uma foto <strong>sem</strong> o modo ativado e depois <strong>com</strong> o modo ativado para comparar.</p>
+
+                        <div class="comparacao-fotos">
+                            <!-- ANTES -->
+                            <div class="foto-col">
+                                <span class="foto-label antes-label">ANTES</span>
+                                <div class="preview-box" id="preview-antes">
+                                    <video id="video-antes" autoplay playsinline></video>
+                                    <canvas id="canvas-antes" class="hidden"></canvas>
+                                    <img id="foto-antes" class="hidden" alt="Foto antes">
+                                    <span class="placeholder-texto">Câmera aqui</span>
+                                </div>
+                                <button class="btn-tirar-foto" id="btn-foto-antes">📷 Fotografar</button>
+                            </div>
+
+                            <!-- DEPOIS -->
+                            <div class="foto-col">
+                                <span class="foto-label depois-label">DEPOIS</span>
+                                <div class="preview-box" id="preview-depois">
+                                    <video id="video-depois" autoplay playsinline></video>
+                                    <canvas id="canvas-depois" class="hidden"></canvas>
+                                    <img id="foto-depois" class="hidden" alt="Foto depois">
+                                    <span class="placeholder-texto">Câmera aqui</span>
+                                </div>
+                                <button class="btn-tirar-foto" id="btn-foto-depois">📷 Fotografar</button>
+                            </div>
+                        </div>
+
+                        <div id="feedback-balao" class="hidden">
+                            <p id="feedback-texto"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Scanner (APENAS para modo documento) -->
+                <div class="slide" id="slide-scanner">
+                    <div class="slide-content">
+                        <h3>🔍 Scanner de Texto</h3>
+                        <p>Aponte para um texto e extraia o conteúdo automaticamente.</p>
+
+                        <div class="scanner-area">
+                            <video id="video-scanner" autoplay playsinline></video>
+                            <canvas id="canvas-scanner" class="hidden"></canvas>
+                        </div>
+
+                        <button id="btn-escanear">Ler Texto</button>
+
+                        <div id="resultado-scanner">O texto detectado aparecerá aqui...</div>
+                    </div>
+                </div>
+
+            </div>
+
+            
 </body>
+
+
 
 </html>
