@@ -53,3 +53,10 @@ const btnFotoDepois = document.getElementById('btn-foto-depois');
 
 const feedbackBalao = document.getElementById('feedback-balao');
 const feedbackTexto = document.getElementById('feedback-texto');
+
+// Scanner (modo documento)
+const slideScanner     = document.getElementById('slide-scanner');
+const videoScanner     = document.getElementById('video-scanner');
+const canvasScanner    = document.getElementById('canvas-scanner');
+const btnEscanear      = document.getElementById('btn-escanear');
+const resultadoScanner = document.getElementById('resultado-scanner');
