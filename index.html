@@ -17,7 +17,152 @@
 </head>
 
 <body>
+<main id="app-container">
 
+        
+    <!-- SEÇÃO 1: LOGIN -->
+        
+        <section id="login-section">
+            <div class="logo">
+                <img src="src/assets/jovi.png" alt="Jovi Smartphone">
+                <p>Smartphones para estudantes</p>
+            </div>
+
+            <form id="loginForm">
+                <h2>Acesse seu Perfil</h2>
+
+                <div class="input-group">
+                    <label for="username">Nome Completo:</label>
+                    <input type="text" id="username" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="rm">RM do Aluno ou Professor:</label>
+                    <input type="number" id="rm" placeholder="Ex: 55432" required>
+                </div>
+
+                <button type="submit" id="btn-entrar">Iniciar Configuração</button>
+            </form>
+        </section>
+
+        
+    <!-- SEÇÃO 2: ONBOARDING -->
+       
+        <section id="onboarding-section" class="hidden">
+            <h2>Personalize sua Experiência</h2>
+            <p>Como você mais utiliza a câmera?</p>
+
+            <div id="questionario">
+                <div class="options">
+                    <button class="opt-btn" data-value="doc">📄 Digitalizar Documentos</button>
+                    <button class="opt-btn" data-value="social">📸 Redes Sociais</button>
+                    <button class="opt-btn" data-value="aula">📚 Fotos de Lousa/Slides</button>
+                    <button class="opt-btn" data-value="paisagem">🏔 Paisagens</button>
+                    <button class="opt-btn" data-value="acao">🏃 Esportes / Ação</button>
+                    <button class="opt-btn" data-value="comida">🍔 Comida</button>
+                </div>
+            </div>
+        </section>
+
+       
+    <!-- SEÇÃO 3: MODOS (SLIDESHOW) -->
+       
+        <section id="modos-section" class="hidden">
+            <header class="app-header">
+                <img src="src/assets/jovi.png" alt="Jovi" class="header-logo">
+                <span id="usuario-nome">Olá!</span>
+            </header>
+
+            <div class="topo-modos">
+                <h2>📸 Câmera Inteligente</h2>
+                <p>Escolha um modo para ver como ele melhora suas fotos.</p>
+            </div>
+
+            <!-- GRADE DE MODOS -->
+            <div class="modos-container">
+
+                <button class="modo-card automatico" data-modo="automatico">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <h3>Automático</h3>
+                </button>
+
+                <button class="modo-card retrato" data-modo="retrato">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <h3>Retrato</h3>
+                </button>
+
+                <button class="modo-card paisagem" data-modo="paisagem">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 17l4-8 4 5 3-3 4 6H3z"></path>
+                        <circle cx="18" cy="6" r="2"></circle>
+                    </svg>
+                    <h3>Paisagem</h3>
+                </button>
+
+                <button class="modo-card noturno" data-modo="noturno">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <h3>Noturno</h3>
+                </button>
+
+                <button class="modo-card comida" data-modo="comida">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                    <h3>Comida</h3>
+                </button>
+
+                <button class="modo-card macro" data-modo="macro">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <h3>Super Perto</h3>
+                </button>
+
+                <button class="modo-card acao" data-modo="acao">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="13" cy="6" r="2"></circle>
+                        <path d="M10.5 10.5L8 21"></path>
+                        <path d="M13.5 10.5l2.5 4-3 2"></path>
+                        <path d="M7 14h4"></path>
+                    </svg>
+                    <h3>Ação</h3>
+                </button>
+
+                <button class="modo-card estudante" data-modo="estudante">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    <h3>Estudante</h3>
+                </button>
+
+                <button class="modo-card documento" data-modo="documento">
+                    <svg class="modo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <h3>Documento</h3>
+                </button>
+
+            </div>
+        </section>
 </body>
 
 </html>
