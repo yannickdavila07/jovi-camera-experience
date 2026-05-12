@@ -250,3 +250,10 @@ const modos = {
     }
 };
 
+// VARIAVEIS DE ESTADO
+let slideAtual = 0;
+let modoSelecionado = "";
+let streamAntes = null;
+let streamDepois = null;
+let streamScanner = null;
+let nomeUsuario = "";
