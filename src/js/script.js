@@ -257,3 +257,62 @@ let streamAntes = null;
 let streamDepois = null;
 let streamScanner = null;
 let nomeUsuario = "";
+
+
+// LOGIN
+
+
+
+
+loginForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+
+    const nome = document.getElementById('username').value;
+    const rm   = document.getElementById('rm').value;
+
+
+    if (nome.trim().length < 3) {
+        alert("Por favor, insira um nome valido (minimo 3 caracteres).");
+        return;
+    }
+    if (rm.length < 5) {
+        alert("O RM deve ter pelo menos 5 digitos.");
+        return;
+    }
+
+
+    nomeUsuario = nome.trim();
+    alert("Bem-vindo, " + nomeUsuario + "! Vamos configurar sua experiencia.");
+
+
+    mostrarSecao(onboardingSection);
+    iniciarOnboarding();
+});
+
+
+
+
+// ONBOARDING
+
+
+
+
+function iniciarOnboarding() {
+    const frequencia = prompt("Com que frequencia voce usa a camera por dia? (Pouco / Medio / Muito)");
+
+
+    if (frequencia) {
+        alert("Entendido! Agora selecione seu principal uso da camera abaixo.");
+    }
+
+
+    const botoesOpcao = document.querySelectorAll('.opt-btn');
+    botoesOpcao.forEach(function(botao) {
+        botao.addEventListener('click', function() {
+            alert("Perfil configurado! Explore todos os modos da Jovi.");
+            mostrarSecao(modosSection);
+            usuarioNome.innerText = "Ola, " + nomeUsuario + "!";
+        });
+    });
+}
