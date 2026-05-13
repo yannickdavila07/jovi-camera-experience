@@ -268,3 +268,145 @@ button:hover {
 .estudante  { background: var(--estudante); }
 .documento  { background: var(--documento); }
 
+/* SEÇÃO CÂMERA / SLIDESHOW */
+
+#camera-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    animation: fadeSlide 0.35s ease;
+    overflow-y: auto;
+}
+
+.slide.active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateX(24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.slide-content {
+    width: 100%;
+    padding: 20px 18px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+/* ---- ÍCONE TOPO DO SLIDE ---- */
+.slide-icone-topo {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.slide-icone-topo svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--primary);
+}
+
+/* Ícone do slide "Quando usar" */
+.quando-icone svg {
+    stroke: #f7971e;
+}
+
+.slide-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.slide-content > p {
+    font-size: 0.88rem;
+    color: var(--muted-text);
+    line-height: 1.65;
+    max-width: 320px;
+}
+
+/* ---- GRADE DE INFO-CARDS ---- */
+.info-cards-grid {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-card-item {
+    flex: 1;
+    min-width: 80px;
+    max-width: 100px;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.info-card-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.info-card-item .card-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.info-card-item .card-label {
+    font-size: 0.68rem;
+    color: var(--muted-text);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.info-card-item .card-valor {
+    font-size: 0.75rem;
+    color: var(--light-text);
+    font-weight: 700;
+}
+
+/* ---- CAIXA DE DICA ---- */
+.dica-box {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0,123,255,0.12), rgba(0,123,255,0.05));
+    border: 1px solid rgba(0,123,255,0.3);
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.82rem;
+    text-align: left;
+    color: #c8dcff;
+    line-height: 1.55;
+}
