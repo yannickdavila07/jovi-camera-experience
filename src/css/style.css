@@ -219,3 +219,52 @@ button:hover {
     gap: 12px;
     padding: 12px 16px 24px;
 }
+/* ---- CARD DE MODO ---- */
+.modo-card {
+    width: 110px;
+    height: 110px;
+    border-radius: 22px;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
+.modo-card:hover {
+    transform: scale(1.07) translateY(-3px);
+    filter: brightness(1.12);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+}
+
+/* Ícone SVG centralizado */
+.modo-card .modo-icon {
+    width: 32px;
+    height: 32px;
+    stroke: rgba(255,255,255,0.95);
+}
+
+.modo-card h3 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* Gradientes de fundo quando não há imagem */
+.automatico { background: var(--automatico); }
+.retrato    { background: var(--retrato); }
+.paisagem   { background: var(--paisagem); }
+.noturno    { background: var(--noturno); }
+.comida     { background: var(--comida); }
+.macro      { background: var(--macro); }
+.acao       { background: var(--acao); }
+.estudante  { background: var(--estudante); }
+.documento  { background: var(--documento); }
+
