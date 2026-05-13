@@ -59,14 +59,19 @@ body {
 #app-container {
     width: 100%;
     max-width: 390px;
-    height: 100vh;
+
+    height: 844px;
+    max-height: 95vh;
+
     background: var(--dark-bg);
     border: 1px solid var(--border);
     border-radius: 28px;
     overflow: hidden;
+
     display: flex;
     flex-direction: column;
     position: relative;
+
     box-shadow: 0 0 40px rgba(0,0,0,0.55);
 }
 
@@ -725,11 +730,14 @@ button:hover {
 
 @media (max-width: 420px) {
     #app-container {
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+
         border-radius: 0;
         border: none;
-        min-height: 100vh;
     }
-
+}
 
     .modo-card {
         width: 95px;
@@ -751,7 +759,7 @@ button:hover {
     .info-card-item {
         min-width: 70px;
     }
-}
+
 
 .app-header {
     width: 100%;
