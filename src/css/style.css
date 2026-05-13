@@ -47,12 +47,27 @@ html {
 }
 
 body {
-    background-color: var(--dark-bg);
+    background: #050505;
     color: var(--light-text);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
+}
+
+#app-container {
+    width: 100%;
+    max-width: 390px;
+    height: 100vh;
+    background: var(--dark-bg);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0,0,0,0.55);
 }
 
 .hidden {
@@ -736,4 +751,36 @@ button:hover {
     .info-card-item {
         min-width: 70px;
     }
+}
+
+.app-header {
+    width: 100%;
+    min-height: 64px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0f0f0f;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.header-logo {
+    width: 95px;
+    object-fit: contain;
+}
+
+#usuario-nome,
+#modo-atual {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+#btn-voltar {
+    background: #222;
+    border: 1px solid #444;
+    padding: 8px 14px;
+    border-radius: 14px;
+    font-size: 0.8rem;
 }
