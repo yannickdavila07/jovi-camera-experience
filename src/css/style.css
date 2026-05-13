@@ -1,0 +1,61 @@
+/* JOVI - CÂMERA INTELIGENTE */
+/* --- VARIÁVEIS --- */
+:root {
+    --primary:    #007bff;
+    --secondary:  #28a745;
+    --dark-bg:    #121212;
+    --card-bg:    #1e1e1e;
+    --light-text: #f4f4f4;
+    --muted-text: #aaaaaa;
+    --border:     #333;
+
+
+    /* cores dos modos */
+    --automatico: linear-gradient(135deg, #2b7cff, #3b52ff);
+    --retrato:    linear-gradient(135deg, #9b4dff, #c25fff);
+    --paisagem:   linear-gradient(135deg, #00b95f, #00d26d);
+    --noturno:    linear-gradient(135deg, #4a49d9, #7271ff);
+    --comida:     linear-gradient(135deg, #ff7a00, #ff9f43);
+    --macro:      linear-gradient(135deg, #ff2f92, #ff5eb2);
+    --acao:       linear-gradient(135deg, #ff2d3f, #ff5967);
+    --estudante:  linear-gradient(135deg, #00b8d9, #007cf0);
+    --documento:  linear-gradient(135deg, #f7971e, #ffd200);
+
+
+    /* cores sólidas para acentos */
+    --automatico-solid: #2b7cff;
+    --retrato-solid:    #9b4dff;
+    --paisagem-solid:   #00b95f;
+    --noturno-solid:    #4a49d9;
+    --comida-solid:     #ff7a00;
+    --macro-solid:      #ff2f92;
+    --acao-solid:       #ff2d3f;
+    --estudante-solid:  #00b8d9;
+    --documento-solid:  #f7971e;
+}
+
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
