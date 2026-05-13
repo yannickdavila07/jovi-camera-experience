@@ -386,3 +386,15 @@ function abrirModo(modo) {
     mostrarSecao(cameraSection);
 }
 
+// BOTAO VOLTAR
+btnVoltar.addEventListener('click', function() {
+    pararCameras();
+    mostrarSecao(modosSection);
+    feedbackBalao.classList.add('hidden');
+    fotoAntes.classList.add('hidden');
+    fotoDepois.classList.add('hidden');
+    videoAntes.classList.remove('hidden');
+    videoDepois.classList.remove('hidden');
+    resultadoScanner.innerText = "O texto detectado aparecera aqui...";
+});
+
