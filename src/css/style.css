@@ -792,3 +792,7 @@ button:hover {
     border-radius: 14px;
     font-size: 0.8rem;
 }
+
+#video-scanner {
+    transform: scaleX(-1);
+}
