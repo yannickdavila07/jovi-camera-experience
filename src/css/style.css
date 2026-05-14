@@ -793,10 +793,10 @@ button:hover {
     font-size: 0.8rem;
 }
 
-#video-scanner {
-    transform: scaleX(-1);
+.preview-box video {
+    transform: none;
 }
 
 video {
-    transform: scaleX(-1);
+    transform: none;
 }
