@@ -591,9 +591,10 @@ btnEscanear.addEventListener('click', async function() {
     canvasScanner.height = videoScanner.videoHeight;
 
 
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.filter = 'contrast(1.2) grayscale(1)';
-    ctx.drawImage(videoScanner, 0, 0, canvasScanner.width, canvasScanner.height);
+   ctx.filter = 'contrast(1.2) grayscale(1)';
+ctx.setTransform(-1, 0, 0, 1, canvasScanner.width, 0);
+ctx.drawImage(videoScanner, 0, 0, canvasScanner.width, canvasScanner.height);
+ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 
     try {
