@@ -796,3 +796,7 @@ button:hover {
 #video-scanner {
     transform: scaleX(-1);
 }
+
+video {
+    transform: scaleX(-1);
+}
